@@ -1,0 +1,37 @@
+@startuml
+!define RECTANGLE class
+
+actor Guest
+actor Host
+actor Admin
+
+rectangle System {
+  usecase "User Registration" as UC1
+  usecase "User Login/Logout" as UC2
+  usecase "Property Management" as UC3
+  usecase "Property Search" as UC4
+  usecase "Booking Creation" as UC5
+  usecase "Booking Confirmation" as UC6
+  usecase "Payments" as UC7
+  usecase "Review and Rating" as UC8
+  usecase "Admin Management" as UC9
+}
+
+Guest --> UC1 : "Registers"
+Guest --> UC2 : "Logs In/Out"
+Guest --> UC4 : "Searches Property"
+Guest --> UC5 : "Creates Booking"
+Guest --> UC6 : "Receives Confirmation"
+Guest --> UC7 : "Makes Payment"
+Guest --> UC8 : "Reviews/Rate Property"
+
+Host --> UC3 : "Manages Property"
+Host --> UC8 : "Responds to Reviews"
+
+Admin --> UC9 : "Manages Users/Properties"
+Admin --> UC9 : "Manages Transactions"
+
+UC7 --> UC5 : "Processes Payment for Booking"
+UC6 --> UC5 : "Confirms Booking"
+
+@enduml
