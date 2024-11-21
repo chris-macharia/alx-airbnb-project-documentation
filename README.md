@@ -3,8 +3,8 @@ Backend development involves creating the server-side logic, database management
 
 The requirements outlined below are categorized into Core Functionalities, Technical Requirements, and Non-Functional Requirements.
 
-🔑 Core Functionalities
-The backend for the Airbnb Clone must enable key features that align with the functionalities of a rental marketplace.
+# 🔑 Core Functionalities <br>
+The backend for the Airbnb Clone must enable key features that align with the functionalities of a rental marketplace.<br>
 
 1. User Management
 User Registration:
@@ -54,8 +54,9 @@ Create an admin interface for monitoring and managing:
 Users
 Listings
 Bookings
-Payments
-🛠️ Technical Requirements
+Payments<br>
+
+# 🛠️ Technical Requirements<br>
 1. Database Management
 Use a relational database such as PostgreSQL or MySQL.
 Required tables:
@@ -83,8 +84,9 @@ Store property images and user profile photos in cloud storage solutions such as
 5. Third-Party Services
 Use email services like SendGrid or Mailgun for email notifications.
 6. Error Handling and Logging
-Implement global error handling for APIs.
-🚀 Non-Functional Requirements
+Implement global error handling for APIs.<br>
+
+# 🚀 Non-Functional Requirements<br>
 1. Scalability
 Use a modular architecture to ensure the app scales easily as traffic increases.
 Enable horizontal scaling using load balancers.
