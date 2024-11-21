@@ -1,0 +1,30 @@
+@startuml
+!define RECTANGLE class
+
+actor Guest
+actor Host
+actor Admin
+actor PaymentGateway
+
+rectangle "System" as System {
+  (User Registration/Login) --> (User Database)
+  (Property Management) --> (Property Database)
+  (Search and Booking) --> (Property Database)
+  (Booking Confirmation) --> (Booking Database)
+  (Booking Confirmation) --> (Payment Processing)
+  (Payment Processing) --> PaymentGateway
+  (Admin Management) --> (User Database)
+  (Admin Management) --> (Property Database)
+  (Admin Management) --> (Booking Database)
+}
+
+Guest --> (User Registration/Login)
+Guest --> (Search and Booking)
+Guest --> (Booking Confirmation)
+
+Host --> (User Registration/Login)
+Host --> (Property Management)
+
+Admin --> (Admin Management)
+
+@enduml
