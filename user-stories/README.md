@@ -1,0 +1,1 @@
+- This directory contains different user stories we we able to get when interacting with the different stakeholders of the system
