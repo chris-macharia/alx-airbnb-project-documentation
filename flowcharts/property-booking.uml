@@ -1,0 +1,26 @@
+@startuml
+start
+:Guest initiates booking;
+:Search Property;
+:Select Property;
+
+if (Is property available?) then (Yes)
+  :Enter Booking Details;
+  :Proceed to Payment;
+
+  if (Payment successful?) then (Yes)
+    :Generate Booking Confirmation;
+  else (No)
+    :Show Payment Error;
+    :Retry Payment;
+    repeat
+      :Proceed to Payment;
+    repeat while (Payment successful? == No)
+  endif
+else (No)
+  :Show Availability Error;
+  :Return to Property Search;
+endif
+
+stop
+@enduml
